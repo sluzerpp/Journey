@@ -1,0 +1,50 @@
+.RouteLine {
+  stroke-width: 5px;
+  stroke: var(--green-dark);
+
+  &--red {
+    stroke: var(--red);
+  }
+}
+
+.map-btn {
+  display: flex;
+  gap: 3px;
+  min-width: 30px;
+  min-height: 30px;
+  max-height: 38px;
+  max-width: 38px;
+  background-color: #fff;
+  font-size: 12px;
+  padding: 3px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  border: 2px solid rgba(0,0,0,0.2);
+  color: #333;
+  background-clip: padding-box;
+}
+
+.map-btn__icon {
+  font-size: 24px;
+}
+
+.map-btn--two-icons {
+  max-height: 100%;
+
+  .map-btn__icon {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.info-btn {
+  .map-btn__icon {
+    font-size: 32px;
+  }
+}
+
+.leaflet-routing-container {
+  display: none;
+}

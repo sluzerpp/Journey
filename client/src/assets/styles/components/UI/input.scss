@@ -1,0 +1,13 @@
+.input {
+  border: 2px solid var(--green);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-family: var(--Raleway);
+  min-height: 35px;
+  max-height: 35px;
+  background-color: #fff;
+}
+
+.input.invalid {
+  border-color: var(--red);
+}

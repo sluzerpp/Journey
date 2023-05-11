@@ -1,0 +1,191 @@
+.quests {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: auto auto 1fr;
+  box-shadow: 0 0 8px var(--shadow-color);
+  padding: 15px;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+  background-color: #FFFFFF30;
+  max-height: 700px;
+  border-radius: 5px;
+  background-color: #FFFFFF90;
+
+  .quests__header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-bottom: 15px;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    padding: 10px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    grid-row: 2;
+    scrollbar-width: 0;
+
+    &-item {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      border-radius: 8px;
+      border: 3px solid var(--green);
+      
+
+      &--route {
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  }
+}
+
+.item {
+  position: relative;
+
+  &__paw {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    stroke: var(--green);
+    fill: var(--green);
+    left: 3px;
+    top: 3px;
+  }
+
+  &__imgs {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__image {
+    width: 100px;
+    border-radius: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  &__content {
+    padding: 5px 5px 5px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    font-size: 16px;
+    text-align: center;
+    font-family: var(--Raleway);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  &__experience{
+    width: 100%;
+    font-family: var(--Raleway);
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+
+    &--route {
+      text-align: center;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__distance {
+    width: 100%;
+    text-align: right;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 0 2px;
+
+  &.show {
+    max-height: 1000px;
+  }
+}
+
+.dropbtn {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  font-family: var(--Raleway);
+  font-size: 16px;
+  font-weight: bold;
+
+  border-bottom: 1px solid var(--black);
+  margin-bottom: 10px;
+
+  &.active .uil {
+    transform: rotate(180deg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .quests {
+    max-width: 600px;
+  }
+}

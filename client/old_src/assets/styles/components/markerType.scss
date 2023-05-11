@@ -1,0 +1,19 @@
+.park .MarkerColor {
+  fill: var(--green)
+}
+
+.memorial .MarkerColor {
+  fill: var(--red-dark);
+}
+
+.museum .MarkerColor {
+  fill: var(--purple-light);
+}
+
+.galery .MarkerColor {
+  fill: var(--blue);
+}
+
+.unavailable .MarkerColor {
+  fill: #555;
+}

@@ -1,0 +1,23 @@
+@use 'sass:color';
+
+$colors: (
+  "red": #F23847,
+  "purple": #8B41F2,
+  "blue": #049DD9,
+  "green": #04BF7B,
+  "yellow": #F2CB05
+);
+
+:root {
+  @each $name, $value in $colors {
+    --#{$name}-light: #{color.adjust($value, $lightness: 10%)};
+    --#{$name}: #{$value};
+    --#{$name}-dark: #{color.adjust($value, $lightness: -10%)};
+  }
+  --white: #fff;
+  --black: #444;
+  --Raleway: 'Raleway', sans-serif;
+  --shadow-color: #333;
+  --nav-height: 56px;
+  --map-url: url('../img/map.jpg');
+}

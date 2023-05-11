@@ -1,0 +1,78 @@
+.sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;  
+    opacity: .1; 
+    z-index: -1;
+    background-image: var(--map-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+#sign__paw.paw-svg {
+  width: 30px;
+  padding-left: 5px;
+  position: relative;
+}
+
+.sign__inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 720px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  padding: 30px 40px;
+  backdrop-filter: blur(2px);
+  background-color: #FFFFFF30;
+}
+
+.sign__reg,
+.sign__login {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sign__title {
+  align-self: center;
+  font-family: var(--Raleway);
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  color: var(--black);
+}
+
+.sign__notice {
+  cursor: pointer;
+  align-self: center;
+  color: var(--black);
+  transition: color .1s ease;
+  &:hover {
+    color: var(--green);
+  }
+}
+
+.sign__preview {
+  width: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

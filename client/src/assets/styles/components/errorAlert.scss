@@ -1,0 +1,31 @@
+.error-alert {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  padding: 10px 20px;
+  color: var(--red);
+  background-color: rgba(255, 204, 204, 1);
+  border: 2px solid var(--red);
+  font-family: var(--Raleway);
+  font-weight: bold;  
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+  cursor: pointer;
+  font-size: 14px;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+
+  &__close {
+    font-size: 16px;
+  }
+
+  &.show {
+    z-index: 10000000;
+    opacity: 1;
+  }
+}

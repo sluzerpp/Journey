@@ -1,0 +1,107 @@
+@use 'reset';
+@use 'var';
+
+@import '../../../node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css';
+@import url('https://unpkg.com/leaflet@1.9.3/dist/leaflet.css');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://unicons.iconscout.com/release/v4.0.0/css/line.css');
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  color: var(--black);
+}
+
+#root {
+  height: 100%;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: calc(100% - var(--nav-height));
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+  overflow: hidden;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;  
+    opacity: .2; 
+    z-index: -1;
+    background: var(--map-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.mb-0-5 {
+  margin-bottom: 5px;
+}
+
+.spinning {
+  animation: spinner 0.5s ease-in infinite;
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 1000px) {
+  ::-webkit-scrollbar {
+    width: 8px; /* ширина для вертикального скролла */
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--green);
+    border-radius: 5px;
+  }
+}
+
+@import './components/navigation';
+@import './components/paws';
+@import './components/loading';
+@import './components/addit';
+@import './components/map';
+@import './components/markerType';
+@import './components/mapControl';
+@import './components/modal';
+@import './components/UI/btn';
+@import './components/popup';
+@import './components/authPage/auth.scss';
+@import './components/UI/input.scss';
+@import './components/errorAlert.scss';
+@import './components/profilePage/profile.scss';
+@import './components/questsList/questsList.scss';
+@import './components/modal/filtermodal.scss';
+@import './components/taskPage/test.scss';
+@import './components/taskPage/task.scss';
+@import './components/singlePage/single.scss';
+@import './components/admin/admin.scss';
+@import './components/UI/others.scss';

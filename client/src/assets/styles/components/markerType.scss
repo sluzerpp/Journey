@@ -1,0 +1,35 @@
+.PARK .MarkerColor {
+  fill: var(--green)
+}
+
+.MEMORIAL .MarkerColor {
+  fill: var(--yellow);
+}
+
+.MUSEUM .MarkerColor {
+  fill: var(--purple-light);
+}
+
+.GALERY .MarkerColor {
+  fill: var(--blue);
+}
+
+.unavailable .MarkerColor {
+  fill: #555;
+}
+
+.filter__color.PARK {
+  background-color: var(--green);
+}
+
+.filter__color.MEMORIAL {
+  background-color: var(--yellow);
+}
+
+.filter__color.MUSEUM {
+  background-color: var(--purple-light);
+}
+
+.filter__color.GALERY {
+  background-color: var(--blue);
+}

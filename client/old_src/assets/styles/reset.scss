@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-style: normal;
+}
+
+input, button {
+  outline: none;
+  background: none;
+  border: none;
+  text-transform: none;
+}
+
+a {
+  text-decoration: none;
+  text-transform: none;
+}
+
+.leaflet-attribution-flag {
+  display: none !important; 
+} 
+
+.leaflet-control-attribution.leaflet-control {
+  display: none !important; 
+}
+
+.leaflet-routing-container.leaflet-bar.leaflet-routing-container-hide.leaflet-routing-collapsible.leaflet-control {
+  display: none !important;
+}
